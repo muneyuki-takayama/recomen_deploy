@@ -1,0 +1,50 @@
+.c-users--tab__wrapper {
+    margin-top: $space_3l;
+    ul {
+        display: flex;
+    }
+}
+
+.c-users--name {
+    font-size: $font-size_xxl;
+    margin: $space_l 0;
+}
+
+.c-users--prof {
+    margin: $space_3l 0;
+    width: 100%;
+    padding: $space_s;
+    letter-spacing: 0.05em;
+
+    @include mq() {
+        width: 50%;
+    }
+}
+
+.c-users--tab__item {
+    display: block;
+    padding: 0 $space_l;
+    font-size: $font-size_xl;
+    color: #808080;
+
+    @include mq() {
+        font-size: $font-size_xl;
+    }
+ }
+
+.c-users--follow {
+    margin: $space_xl 0;
+    a {
+        display: block;
+        padding: $space_s;
+        font-size: 20px;
+
+        @include mq() {
+            padding: $space_l;
+        }
+
+        &:hover {
+            color: #808080;
+        }
+    }
+}

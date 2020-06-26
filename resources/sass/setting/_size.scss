@@ -1,0 +1,73 @@
+//レイアウト幅
+$layout-width-container: 2000px;
+$layout-width-form-container: 600px;
+$layout-width-tagsearch-container: 800px;
+
+//ブレークポイント
+$breakpoints: (
+    'sp': 'screen and (min-width: 415px)',
+    'tab': 'screen and (min-width: 769px)',
+    'pc': 'screen and (min-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: tab) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content
+    }
+}
+
+//ヘッダー高さ
+$header-height-sp: 60px;
+$header-height-pc: 80px;
+
+//フッター高さ
+$footer-height-sp: 40px;
+$footer-height-pc: 60px;
+
+
+//余白
+$pd-x-pc: 30px;
+$pd-x-pc-l:90px;
+$pd-x-sp: 30px;
+
+$space_s: 5px;
+$space_m: 10px;
+$space_l: 15px;
+$space_xl: 20px;
+$space_xxl: 30px;
+$space_3l: 40px;
+$space_4l: 50px;
+$space_5l: 60px;
+$space_7l: 70px;
+$space_8l: 80px;
+$space_9l: 90px;
+$space_10l: 1000px;
+
+
+
+// z-indexの指定
+$layer: (
+    loading: 200,
+    burger_trigger:100,
+    burger_modal: 90,
+    header: 30,
+    footer: 20,
+    modal: 10,
+    upload_img: 3,
+    upload_icon: 2,
+    default: 1,
+    formLabel: -1,
+);
+
+// 使い方   z-index: #{map-get($layer, burger_trigger)};
+
+//フォントサイズ
+$font-size_s: 12px;
+$font-size_m: 14px;
+$font-size_default: 16px;
+$font-size_l: 18px;
+$font-size_xl: 24px;
+$font-size_xxl: 32px;
+$font-size_3l: 38px;
+
+

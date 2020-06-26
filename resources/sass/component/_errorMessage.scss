@@ -1,0 +1,12 @@
+.c-error--container {
+
+    margin: $space_m;
+
+    ul li {
+        padding: $space_s;
+    }
+
+    .fa, .fas {
+        color: $form-error-message;
+    }
+}

@@ -1,0 +1,116 @@
+.c-form--header {
+    margin-bottom: $space_5l;   
+    font-size: $font-size_xxl;
+}
+
+.c-google--link {
+    display: inline-block;
+    margin-bottom: $space_l;
+    background-color: $font-baseColor--accent;
+    color: #fff;
+    border-radius: 8px;
+    padding: $space_m;
+
+    .fab {
+        margin-right: $space_s;
+    }
+
+    &:hover {
+        transition: .3s;
+        opacity: .7;
+    }
+}
+
+.c-form--wrapper{
+    width: 100%;
+}
+
+.c-form--container {
+    position: relative;
+    width: 100%;
+    margin: 40px 3%;
+
+    @include mq() {
+        width: 80%;
+    }
+
+    p {
+        font-size: $font-size_m;
+        padding: $space_s;
+
+        @include mq() {
+            font-size: $font-size_l;
+        }
+    }
+}
+
+.c-form--container input[type='text'] {
+    font: 15px/24px $font-family-mincho;
+    box-sizing: border-box;
+    width: 100%;
+    letter-spacing: 1px;
+    padding-left: 8em;
+
+    @include mq() {
+        font: 18px/24px $font-family-mincho;
+    }
+    
+
+    &:focus {
+        outline: none;   
+    }
+}
+
+.c-form--container input[type='password'] {
+    font: 15px/24px $font-family-mincho;
+    box-sizing: border-box;
+    width: 100%;
+    letter-spacing: 1px;
+    padding-left: 8em;
+    background: transparent;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.c-form--input {
+    padding: 4px 0;
+    border: 0;
+    border-bottom: 1px solid $form-border--bottom;
+    background-color: transparent;
+
+    & ~ label {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 100%;
+        transition: 0.3s;
+        letter-spacing: 0.5px;
+        color: $form-label;
+    }
+}
+
+.c-form--input ~ .focus_line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: 0.4s;
+    background-color: $form-focus;
+}
+
+.c-form--input:focus ~ .focus_line,
+.c-form--container.c-form--input ~ .focus_line {
+    width: 100%;
+    transition: 0.4s;
+}
+
+.c-form--input:focus ~ label,
+.c-form--container.c-form--input ~ label {
+    font-size: $font-size_s;
+    top: -16px;
+    transition: 0.3s;
+    color: $form-focus;
+}

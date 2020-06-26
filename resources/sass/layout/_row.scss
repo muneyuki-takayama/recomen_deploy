@@ -1,0 +1,32 @@
+.l-row {
+    display: flex;
+    flex-wrap: wrap;
+    height: inherit;
+
+    &--center {
+        justify-content: center;
+    }
+
+    &--colum {
+        flex-direction: column;
+    }
+
+    &--middle {
+        align-items: center;
+    }
+
+    &--between {
+        justify-content: space-between
+    }
+
+    &--end {
+        justify-content: flex-end;
+    }
+}
+
+.l-row--central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

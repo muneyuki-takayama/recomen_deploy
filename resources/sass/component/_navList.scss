@@ -1,0 +1,128 @@
+.c-menu--trigger {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+    position: relative;
+    width: 40px;
+    height: 32px;
+    padding: $space_l;
+    z-index: #{map-get($layer, burger_trigger)};
+
+    @include mq() {
+        display: none;
+    }
+
+    span {
+        display: inline-block;
+        transition: all .4s;
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $burger-menu-background;
+        border-radius: 4px;
+
+        &:nth-of-type(1) {
+            top: 0;
+        }
+
+        &:nth-of-type(2) {
+            top: 14px;
+        }
+
+        &:nth-of-type(3) {
+            bottom: 0;
+        }
+    }
+
+    &.menuActive span {
+        &:nth-of-type(1) {
+            transform: translateY(12px) rotate(-45deg);
+        }
+
+        &:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+            transform: translateY(-15px) rotate(45deg);
+        }
+    }
+}
+
+.c-menu--list__sp {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    background: $burger-nav-background;
+    opacity: .9;
+    width: 100%;
+    height: 100vh;
+    padding-top: $space_xl;
+    transition: .5s;
+
+    @include mq() {
+        display: none;
+    }
+
+    &.menuActive {
+        display: block;
+        transition: .5s;
+        transform: translateX(-100%);
+        z-index: #{map-get($layer, burger_modal)};
+    }
+}
+
+.c-menu--list__pc {
+    display: none;
+    @include mq () {
+        display: block;
+    }
+}
+
+.c-list--container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-list {
+    
+    li {
+        padding: $space_xl;
+        font-size: $font-size_l;
+    }
+
+    li:hover {
+        transition: .3s;
+        opacity: .7;
+    }
+
+    @include mq() {
+        padding: 0 $space_xl;
+
+        li {
+            display: inline-block;
+            padding: 0 $space_xl;
+            font-size: $font-size_l;
+        }
+
+        li:hover {
+            transition: .3s;
+            color: $font-baseColor--accent;
+        }
+    }
+
+
+}
+
+.c-list--icon {
+    @include mq() {
+        display: none;
+    }
+}
+

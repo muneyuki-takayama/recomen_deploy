@@ -1,0 +1,9 @@
+.l-footer {
+    width: 100%;
+    z-index: map-get($layer, "footer" );
+    height: $footer-height-sp;
+
+    @include mq() {
+        height: $footer-height-pc;
+    }
+}

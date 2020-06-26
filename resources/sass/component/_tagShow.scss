@@ -1,0 +1,20 @@
+.c-tagShow--headWrap {
+    margin-top: $space_l;
+}
+
+.c-tagShow--head {
+    font-size: $font-size_xxl;
+
+    @include mq() {
+        font-size: $font-size_3l;
+    }
+}
+
+.c-tagShow--count {
+    margin-top: $space_m;
+    font-size: $font-size_xl;
+
+    @include mq() {
+        font-size: $font-size_xl;
+    }
+}

@@ -1,0 +1,13 @@
+.c-follow--container {
+    margin-top: $space_xxl;
+    flex-wrap: wrap;
+}
+
+.c-follow--wrapper {
+    width: 150px;
+    height: auto;
+    margin-bottom: $space_l;
+    @include mq() {
+        width: 200px;
+    }
+ }

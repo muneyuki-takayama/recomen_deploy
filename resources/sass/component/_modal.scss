@@ -1,0 +1,43 @@
+#overlay {
+    z-index: #{map-get($layer, default)};
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    z-index: #{map-get($layer, modal)};
+    width: 50%;
+    padding: 1em;
+    background: #fff;
+}
+
+.c-modal--button {
+    @extend %button;
+    padding: $space_l $space_xl;
+}
+
+.c-modal--confirm {
+    color: $font-color--base;
+    font-size: $font-size_l;
+}
+
+.c-modal--cancel:hover {
+    opacity: .5;
+    transition: .3s;
+}
+
+.c-modal--delete {
+    color: $font-baseColor--accent;
+}
+
+.c-modal--delete:hover {
+    opacity: .5;
+    transition: .3s;
+}

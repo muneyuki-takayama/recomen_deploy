@@ -1,0 +1,35 @@
+.c-dropdown {
+
+    &--wrapper {
+        margin: 0 0 0 auto;
+        position: relative;
+    }
+    
+    &--button {
+         @extend %button;
+
+         &:focus {
+             outline: 0;
+         }
+    }
+
+    &--content {
+            display: block;
+            width: 50px;
+            background: #fff;
+            box-shadow: 0 2px 6px 2px rgba(60, 64, 67, 0.149),
+            0 1px 2px 0 rgba(60, 64, 67, 0.302);
+            border-radius: 4px;
+            overflow: hidden;
+            position: absolute;
+            top: 32px;
+            left: 0;
+            z-index: #{map-get($layer, dropdown)};
+    }
+
+    
+
+    &--item {
+        display: block;
+    }
+}

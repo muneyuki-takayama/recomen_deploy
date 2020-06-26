@@ -1,0 +1,85 @@
+.c-post--title {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    font-size: $font-size_xxl;
+    margin: 0 auto;
+    margin-bottom: $space_3l;
+    border-top: solid 2px $font-color--base;
+    border-bottom: solid 2px $font-color--base;
+    position: relative;
+
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        top: -7px;
+        width: 2px;
+        height: calc(100% + 14px);
+        background-color: $font-color--base;
+    }
+
+    &:before {
+        left: 7px;
+    }
+
+    &:after {
+        right: 7px;
+    }
+}
+
+.c-title--wrap {
+    margin-top: $space_xl; 
+    margin-bottom: $space_l;
+
+    & p {
+        font-size: $font-size_l;
+        font-weight: 600;
+        margin-bottom: $space_m;
+    }
+
+    @include mq () {
+        width: 500px;
+    }
+}
+
+.c-title--input {
+    width: 100%;
+    font-size: $font-size_xl;
+    padding: $space_s;
+}
+
+
+
+.c-comment--wrap {
+    margin-top: $space_xl;
+
+    & p {
+        font-size: $font-size_l;
+        font-weight: 600;
+        margin-bottom: $space_m;
+    }
+
+    @include mq () {
+        width: 500px;
+    }
+}
+
+.c-comment--text {
+    width: 100%;
+    font-size: $font-size_m;
+    letter-spacing: 0.05em;
+}
+
+.c-tag--title {
+    margin-top: $space_xxl;
+}
+
+.c-explain--wrapper {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: $space_xxl;
+    
+    & p {
+        padding: $space_m;
+    }
+}

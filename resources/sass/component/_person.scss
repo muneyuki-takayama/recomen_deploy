@@ -1,0 +1,29 @@
+.c-person--img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: $space_m;
+
+    @include mq() {
+         width: 80px;
+         height: 80px;
+         margin-top: $space_l;
+    }
+
+}
+.c-person--icon {
+   font-size: $font-size_xxl;
+
+   @include mq() {
+       font-size: 48px;
+   }
+}
+
+.c-person--name {
+    font-size: $font-size_l;
+
+    @include mq() {
+        font-size: $font-size_xl;
+    }
+}

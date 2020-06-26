@@ -1,0 +1,22 @@
+.c-tag--wrapper {
+    flex-wrap: wrap;
+}
+
+.c-tag--cover {
+    margin-top: $space_4l;
+}
+
+.c-tag--link {
+    margin-right: 5px;
+    margin-bottom: $space_l;
+    display: inline-block;
+    font-size: $font-size_l;
+    background-color: #fff;
+    color: $font-baseColor--base;
+    border-radius: 12px;
+    border: 2px solid #FFE4B5;
+}
+
+.c-tag--hash {
+    padding: $space_s $space_l;
+}

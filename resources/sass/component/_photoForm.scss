@@ -1,0 +1,65 @@
+.c-photo--input {
+    display: flex;
+    flex-direction: column;
+
+    @include mq() {
+        flex-direction: row;
+    }
+}
+
+.c-photo--block {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 30px 0;
+
+    @include mq() {
+        width: 400px;
+    }
+}
+
+.c-upload--wrapper {
+    position: relative;
+}
+
+.c-upload--input {
+    display: none;
+}
+
+.c-upload--icon {
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    left: 40%;
+    z-index: #{map-get($layer, upload_icon)};
+}
+
+.c-upload--img {
+    object-fit: scale-down;
+    width: 300px;
+    height: 100%;
+    z-index: #{map-get($layer, upload_img)};
+
+    @include mq() {
+        width: 400px;
+        max-width: 100%;
+        height: 300px;
+    }
+}
+
+.c-photo--imgNum {
+    border: 1px solid $font-baseColor--accent;
+    padding: $space_s;
+    font-weight: 600;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.c-tag--container {
+    margin-top: $space_xxl;
+
+    & > p {
+        font-size: $font-size_l;
+        font-weight: 600;
+    }
+}

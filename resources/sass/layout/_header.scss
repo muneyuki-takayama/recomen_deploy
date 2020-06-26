@@ -1,0 +1,9 @@
+.l-header {
+    width: 100%;
+    height: $header-height-sp;
+    z-index: map-get($layer, "header");
+
+    @include mq() {
+        height: $header-height-pc;
+    }
+}
